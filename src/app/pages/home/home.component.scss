@@ -1,0 +1,132 @@
+.landingPage {
+  height: 100svh;
+  background-image: linear-gradient(
+    to right bottom,
+    #23589b,
+    #0075af,
+    #0091b8,
+    #00abba,
+    #51c4b8
+  );
+  padding-top: 15rem;
+  display: grid;
+  grid-template-columns: 60% 40%;
+  .welcome {
+    padding: 3rem;
+    h1 {
+      margin: 0;
+      font-size: 3rem;
+      font-family: "Montserrat", sans-serif;
+      line-height: 1.05;
+      font-weight: 600;
+      color: #fefefe;
+      padding-bottom: 1rem;
+    }
+    p {
+      margin: 0;
+      padding: 1rem 0;
+      color: #fefefe;
+    }
+    button {
+      transition: 0.3s;
+      background: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 0.25rem;
+      font-weight: 500;
+      cursor: pointer;
+      margin-top: 1rem;
+    }
+    button:hover {
+      color: #2ea0ba;
+    }
+  }
+  img {
+    width: 90%;
+  }
+}
+.rest {
+  height: 100svh;
+}
+
+@media screen and (max-width: 1000px) {
+  .landingPage {
+    grid-template-columns: 65% 35%;
+    .welcome {
+      padding: 3rem;
+      h1 {
+        font-size: 2rem;
+      }
+    }
+    img {
+      width: 90%;
+    }
+  }
+}
+
+@media screen and (max-width: 870px) {
+  .landingPage {
+    grid-template-columns: 100%;
+    padding-top: 8rem;
+    .welcome {
+      order: 1;
+      padding: 0 2rem;
+      h1 {
+        font-size: 2rem;
+      }
+    }
+    img {
+      width: 100%;
+      padding: 0 20%;
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+    .landingPage {
+      grid-template-columns: 100%;
+      padding-top: 8rem;
+      .welcome {
+        order: 1;
+        padding: 0 2rem;
+        h1 {
+          font-size: 2rem;
+        }
+      }
+      img {
+        width: 100%;
+        padding: 0 20%;
+      }
+    }
+  }
+
+  @media screen and (max-height: 745px) {
+    .landingPage {
+      .welcome {
+        h1 {
+          font-size: 1.5rem;
+        }
+        p {
+          font-size: .9rem;
+        }
+      }
+      img {
+        display: none;
+      }
+    }
+  }
+
+  @media screen and (max-height: 600px) {
+    .landingPage {
+      .welcome {
+        h1 {
+          font-size: 1rem;
+          padding-bottom: 0;
+        }
+        p {
+          font-size: 0.6rem;
+          padding-bottom: 0;
+        }
+      }
+    }
+  }

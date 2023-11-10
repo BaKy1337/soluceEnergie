@@ -1,0 +1,48 @@
+<h1>Nos solutions</h1>
+<div class="separator"><div class="line"></div></div>
+
+<div class="carouselContainer">
+    <div class="dots top">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+    <div class="dots bottom">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+    <owl-carousel-o [options]="customOptions">
+        <ng-template carouselSlide *ngFor="let solution of solutions">
+            <div class="carousel">
+                <div class="header">
+                    <img src="{{solution.icon}}" alt="">
+                    <h2 *ngFor="let title of solution.title">{{title}}</h2>
+                </div>
+                <ul>
+                    <li *ngFor="let item of solution.list">{{item}}</li>
+                </ul>
+                <a routerLink="/nos-solutions" [queryParams]="{id: solution.id, type: solution.type}">En savoir plus</a>
+            </div>
+        </ng-template>
+    </owl-carousel-o>
+</div>
+

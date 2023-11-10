@@ -1,0 +1,38 @@
+<h1>Nos solutions</h1>
+<div class="separator"><div class="line"></div></div>
+
+<div class="servicesContainer">
+    <div class="dots left">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+    <div class="dots right">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+    <div class="service" *ngFor="let service of services">
+        <img src="{{service.icon}}" alt="service icon">
+        <h2>{{service.title}}</h2>
+        <p *ngFor="let text of service.text">{{text}}</p>
+    </div>
+</div>

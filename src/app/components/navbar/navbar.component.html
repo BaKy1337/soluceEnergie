@@ -1,0 +1,120 @@
+<nav class="desktopMenu">
+  <img
+    routerLink="/"
+    src="../../../assets/logo_white.svg"
+    alt="Logo du groupe SOLUCE ENERGIE"
+  />
+  <ul>
+    <li><a [matMenuTriggerFor]="menuSolutions">Nos solutions</a></li>
+    <li><a [matMenuTriggerFor]="menuLeGroupe">Le groupe</a></li>
+    <li><a>Contact</a></li>
+    <li><a class="btn">Analyse gratuite</a></li>
+    <li>
+      <mat-icon
+          aria-hidden="false"
+          aria-label="theme icon"
+          fontIcon="{{this.darkMode ? 'dark_mode':'light_mode'}}"
+          (click)="toggleTheme()"
+          style="cursor: pointer;"
+        ></mat-icon>
+    </li>
+  </ul>
+</nav>
+
+<mat-menu class="matMenu" #menuSolutions>
+  <menu mat-menu-item [matMenuTriggerFor]="menuIsolation">Isolation</menu>
+  <menu mat-menu-item [matMenuTriggerFor]="menuChauffage">Chauffage</menu>
+  <menu mat-menu-item [matMenuTriggerFor]="menuECS">Eau chaude sanitaire</menu>
+  <menu mat-menu-item>Photovoltaïque</menu>
+</mat-menu>
+
+<mat-menu class="matMenu" #menuIsolation>
+  <menu mat-menu-item>Isolation des combles</menu>
+  <menu mat-menu-item>Isolation des murs</menu>
+</mat-menu>
+
+<mat-menu class="matMenu" #menuChauffage>
+  <menu mat-menu-item>Pompe à chaleur air eau</menu>
+  <menu mat-menu-item>Pompe à chaleur air air</menu>
+  <menu mat-menu-item>Chauffage solaire</menu>
+</mat-menu>
+
+<mat-menu class="matMenu" #menuECS>
+  <menu mat-menu-item>Chauffe-eau thermodynamique</menu>
+  <menu mat-menu-item>Chauffe-eau solaire</menu>
+</mat-menu>
+
+<mat-menu class="matMenu" #menuLeGroupe>
+  <menu mat-menu-item>Qui sommes nous ?</menu>
+  <menu mat-menu-item>Nos certifications</menu>
+  <menu mat-menu-item>Nos partenaires</menu>
+  <menu mat-menu-item>Vos aides</menu>
+</mat-menu>
+
+<!-- Mobile Menu -->
+
+<nav class="mobileMenu">
+  <img
+    routerLink="/"
+    src="../../../assets/logo_white.svg"
+    alt="Logo du groupe SOLUCE ENERGIE"
+  />
+  <div class="btns">
+    <button mat-icon-button aria-label="menu icon" (click)="toggleMenu()">
+      <mat-icon
+        aria-hidden="false"
+        aria-label="menu icon"
+        fontIcon="menu"
+      ></mat-icon>
+    </button>
+    <button mat-icon-button aria-label="theme icon" (click)="toggleTheme()">
+      <mat-icon
+            aria-hidden="false"
+            aria-label="theme icon"
+            fontIcon="{{this.darkMode ? 'dark_mode':'light_mode'}}"
+            style="cursor: pointer;"
+          ></mat-icon>
+    </button>
+  </div>
+</nav>
+
+<div class="mobileMenuOpened" *ngIf="isMenuOpened">
+  <button mat-icon-button aria-label="close icon" (click)="toggleMenu()">
+    <mat-icon
+      aria-hidden="false"
+      aria-label="menu icon"
+      fontIcon="close"
+    ></mat-icon>
+  </button>
+  <ul class="menuOpened">
+    <li (click)="isSolutionsVisible = !isSolutionsVisible;isLeGroupeVisible=false;isIsolationVisible =false;isChauffageVisible=false;isECSVisible=false">Nos solutions <mat-icon>{{isSolutionsVisible ? 'expand_less':'expand_more'}}</mat-icon></li>
+    <div class="nestedGroup" [ngClass]="isSolutionsVisible ? 'groupVisible':'groupHidden'">
+        <li (click)="isIsolationVisible = !isIsolationVisible;isChauffageVisible=false;isECSVisible=false">Isolation <mat-icon>{{isIsolationVisible ? 'expand_less':'expand_more'}}</mat-icon></li>
+        <div class="nestedSubGroup" [ngClass]="isIsolationVisible ? 'groupVisible':'groupHidden'" >
+            <li>Isolation des combles</li>
+            <li>Isolation des murs</li>
+        </div>
+        <li (click)="isChauffageVisible = !isChauffageVisible;isIsolationVisible =false;isECSVisible=false">Chauffage <mat-icon>{{isChauffageVisible ? 'expand_less':'expand_more'}}</mat-icon></li>
+        <div class="nestedSubGroup" [ngClass]="isChauffageVisible ? 'groupVisible':'groupHidden'">
+            <li>Pompe à chaleur air eau</li>
+            <li>Pompe à chaleur air air</li>
+            <li>Chauffage solaire</li>
+        </div>
+        <li (click)="isECSVisible = !isECSVisible;isIsolationVisible =false;isChauffageVisible=false">Eau chaud sanitaire <mat-icon>{{isECSVisible ? 'expand_less':'expand_more'}}</mat-icon></li>
+        <div class="nestedSubGroup" [ngClass]="isECSVisible ? 'groupVisible':'groupHidden'">
+            <li>Chauffe-eau thermodynamique</li>
+            <li>Chauffe-eau solaire</li>
+        </div>
+        <li>Photovoltaïque</li>
+    </div>
+    <li (click)="isLeGroupeVisible = !isLeGroupeVisible;isSolutionsVisible = false;isIsolationVisible =false;isChauffageVisible=false;isECSVisible=false">Le groupe <mat-icon>{{isSolutionsVisible ? 'expand_less':'expand_more'}}</mat-icon></li>
+    <div class="nestedGroup" [ngClass]="isLeGroupeVisible ? 'groupVisible':'groupHidden'">
+        <li >Qui sommes nous ?</li>
+        <li>Nos certifications</li>
+        <li>Nos partenaires</li>
+        <li>Vos aides</li>
+    </div>
+    <li>Contact</li>
+    <li class="btnAnalyse">Analyse gratuite</li>
+</ul>
+</div>
