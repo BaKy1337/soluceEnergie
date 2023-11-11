@@ -1,0 +1,40 @@
+<div class="testimonials">
+    <h1>Ce que disent nos clients</h1>
+    <div class="separator"><div class="line"></div></div>
+    <div class="dots left">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+    <div class="dots right">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+    <owl-carousel-o [options]="customOptions" class="carouselTestimonials">
+        <ng-template carouselSlide *ngFor="let commentaire of commentaires">
+            <div class="carousel">
+                <p>{{commentaire.message}}</p>
+                <h4>{{commentaire.auteur}}</h4>
+            </div>
+        </ng-template>
+    </owl-carousel-o>
+</div>

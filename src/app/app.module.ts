@@ -14,6 +14,8 @@ import {MatTreeModule} from '@angular/material/tree';
 import { ListsolutionsComponent } from './components/listsolutions/listsolutions.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { ListservicesComponent } from './components/listservices/listservices.component';
+import { TestimonialsComponent } from './components/testimonials/testimonials.component';
+import { BrandsComponent } from './components/brands/brands.component';
 
 
 @NgModule({
@@ -22,7 +24,9 @@ import { ListservicesComponent } from './components/listservices/listservices.co
     HomeComponent,
     NavbarComponent,
     ListsolutionsComponent,
-    ListservicesComponent
+    ListservicesComponent,
+    TestimonialsComponent,
+    BrandsComponent
   ],
   imports: [
     BrowserModule,
