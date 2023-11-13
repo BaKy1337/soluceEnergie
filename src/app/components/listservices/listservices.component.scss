@@ -78,6 +78,7 @@ h1 {
     .servicesContainer {
         .service {
             width: 75%;
+            min-width: fit-content;
         }
       }
 }

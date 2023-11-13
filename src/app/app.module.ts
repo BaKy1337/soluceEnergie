@@ -16,6 +16,7 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
 import { ListservicesComponent } from './components/listservices/listservices.component';
 import { TestimonialsComponent } from './components/testimonials/testimonials.component';
 import { BrandsComponent } from './components/brands/brands.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { BrandsComponent } from './components/brands/brands.component';
     ListsolutionsComponent,
     ListservicesComponent,
     TestimonialsComponent,
-    BrandsComponent
+    BrandsComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

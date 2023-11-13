@@ -1,0 +1,103 @@
+.footer {
+  padding: 2rem 1rem;
+  background: #23589b;
+  .top_footer {
+    display: flex;
+    justify-content: space-around;
+    gap: 5rem;
+    flex-wrap: wrap;
+    .entreprise {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      img {
+        height: 7rem;
+      }
+      .socials {
+        display: flex;
+        gap: 1rem;
+        img {
+          height: 2rem;
+        }
+      }
+    }
+    .list {
+      list-style-type: none;
+      color: #fefefe;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      .title {
+        font-size: 1.25rem;
+        font-weight: 600;
+      }
+      li {
+        a {
+          text-decoration: none;
+          color: #fefefe;
+          text-transform: capitalize;
+        }
+      }
+    }
+    .newsletter {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      span {
+        color: #fefefe;
+        font-size: 1.25rem;
+        font-weight: 600;
+      }
+      .inputNewsletter {
+        position: relative;
+        input {
+          color: #fefefe;
+          border: none;
+          border-radius: 0.25rem;
+          background: #3376a9;
+          padding: 0.5rem 2rem 0.5rem 0.5rem;
+        }
+        input::placeholder {
+          color: #fefefe;
+          opacity: 0.5;
+        }
+        input:focus-visible {
+          outline: 0;
+        }
+        mat-icon {
+          position: absolute;
+          right: 0.5rem;
+          color: white;
+          top: 48%;
+          transform: translateY(-50%) rotate(-45deg);
+          font-size: 1rem;
+          width: fit-content;
+          height: fit-content;
+        }
+      }
+    }
+  }
+  .copyright {
+    span {
+      display: flex;
+      text-align: center;
+      justify-content: center;
+      color: #fefefe;
+      font-size: 0.8rem;
+      padding-top: 5rem;
+    }
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .footer {
+    .top_footer {
+      .entreprise {
+        img {
+            max-width: 90%;
+            margin: auto;
+        }
+      }
+    }
+  }
+}
