@@ -13,7 +13,7 @@
       <mat-icon
           aria-hidden="false"
           aria-label="theme icon"
-          fontIcon="{{this.darkMode ? 'dark_mode':'light_mode'}}"
+          fontIcon="{{this.darkMode ? 'light_mode':'dark_mode'}}"
           (click)="toggleTheme()"
           style="cursor: pointer;"
         ></mat-icon>
@@ -25,23 +25,23 @@
   <menu mat-menu-item [matMenuTriggerFor]="menuIsolation">Isolation</menu>
   <menu mat-menu-item [matMenuTriggerFor]="menuChauffage">Chauffage</menu>
   <menu mat-menu-item [matMenuTriggerFor]="menuECS">Eau chaude sanitaire</menu>
-  <menu mat-menu-item>Photovoltaïque</menu>
+  <menu mat-menu-item routerLink="/nos-solutions" [queryParams]="{solutionID: 'photovoltaique'}">Photovoltaïque</menu>
 </mat-menu>
 
 <mat-menu class="matMenu" #menuIsolation>
-  <menu mat-menu-item>Isolation des combles</menu>
-  <menu mat-menu-item>Isolation des murs</menu>
+  <menu mat-menu-item routerLink="/nos-solutions" [queryParams]="{solutionID: 'idc'}">Isolation des combles</menu>
+  <menu mat-menu-item routerLink="/nos-solutions" [queryParams]="{solutionID: 'idm'}">Isolation des murs</menu>
 </mat-menu>
 
 <mat-menu class="matMenu" #menuChauffage>
-  <menu mat-menu-item>Pompe à chaleur air eau</menu>
-  <menu mat-menu-item>Pompe à chaleur air air</menu>
-  <menu mat-menu-item>Chauffage solaire</menu>
+  <menu mat-menu-item routerLink="/nos-solutions" [queryParams]="{solutionID: 'pacae'}">Pompe à chaleur air eau</menu>
+  <menu mat-menu-item routerLink="/nos-solutions" [queryParams]="{solutionID: 'pacaa'}">Pompe à chaleur air air</menu>
+  <menu mat-menu-item routerLink="/nos-solutions" [queryParams]="{solutionID: 'cs'}">Chauffage solaire</menu>
 </mat-menu>
 
 <mat-menu class="matMenu" #menuECS>
-  <menu mat-menu-item>Chauffe-eau thermodynamique</menu>
-  <menu mat-menu-item>Chauffe-eau solaire</menu>
+  <menu mat-menu-item routerLink="/nos-solutions" [queryParams]="{solutionID: 'cet'}">Chauffe-eau thermodynamique</menu>
+  <menu mat-menu-item routerLink="/nos-solutions" [queryParams]="{solutionID: 'ces'}">Chauffe-eau solaire</menu>
 </mat-menu>
 
 <mat-menu class="matMenu" #menuLeGroupe>
@@ -71,7 +71,7 @@
       <mat-icon
             aria-hidden="false"
             aria-label="theme icon"
-            fontIcon="{{this.darkMode ? 'dark_mode':'light_mode'}}"
+            fontIcon="{{this.darkMode ? 'light_mode':'dark_mode'}}"
             style="cursor: pointer;"
           ></mat-icon>
     </button>
@@ -91,21 +91,21 @@
     <div class="nestedGroup" [ngClass]="isSolutionsVisible ? 'groupVisible':'groupHidden'">
         <li (click)="isIsolationVisible = !isIsolationVisible;isChauffageVisible=false;isECSVisible=false">Isolation <mat-icon>{{isIsolationVisible ? 'expand_less':'expand_more'}}</mat-icon></li>
         <div class="nestedSubGroup" [ngClass]="isIsolationVisible ? 'groupVisible':'groupHidden'" >
-            <li>Isolation des combles</li>
-            <li>Isolation des murs</li>
+            <li routerLink="/nos-solutions" [queryParams]="{solutionID: 'idc'}" (click)="toggleMenu()">Isolation des combles</li>
+            <li routerLink="/nos-solutions" [queryParams]="{solutionID: 'idm'}" (click)="toggleMenu()">Isolation des murs</li>
         </div>
         <li (click)="isChauffageVisible = !isChauffageVisible;isIsolationVisible =false;isECSVisible=false">Chauffage <mat-icon>{{isChauffageVisible ? 'expand_less':'expand_more'}}</mat-icon></li>
         <div class="nestedSubGroup" [ngClass]="isChauffageVisible ? 'groupVisible':'groupHidden'">
-            <li>Pompe à chaleur air eau</li>
-            <li>Pompe à chaleur air air</li>
-            <li>Chauffage solaire</li>
+            <li routerLink="/nos-solutions" [queryParams]="{solutionID: 'pacae'}" (click)="toggleMenu()">Pompe à chaleur air eau</li>
+            <li routerLink="/nos-solutions" [queryParams]="{solutionID: 'pacaa'}" (click)="toggleMenu()">Pompe à chaleur air air</li>
+            <li routerLink="/nos-solutions" [queryParams]="{solutionID: 'cs'}" (click)="toggleMenu()">Chauffage solaire</li>
         </div>
         <li (click)="isECSVisible = !isECSVisible;isIsolationVisible =false;isChauffageVisible=false">Eau chaud sanitaire <mat-icon>{{isECSVisible ? 'expand_less':'expand_more'}}</mat-icon></li>
         <div class="nestedSubGroup" [ngClass]="isECSVisible ? 'groupVisible':'groupHidden'">
-            <li>Chauffe-eau thermodynamique</li>
-            <li>Chauffe-eau solaire</li>
+            <li routerLink="/nos-solutions" [queryParams]="{solutionID: 'cet'}" (click)="toggleMenu()">Chauffe-eau thermodynamique</li>
+            <li routerLink="/nos-solutions" [queryParams]="{solutionID: 'ces'}" (click)="toggleMenu()">Chauffe-eau solaire</li>
         </div>
-        <li>Photovoltaïque</li>
+        <li routerLink="/nos-solutions" [queryParams]="{solutionID: 'photovoltaique'}" (click)="toggleMenu()">Photovoltaïque</li>
     </div>
     <li (click)="isLeGroupeVisible = !isLeGroupeVisible;isSolutionsVisible = false;isIsolationVisible =false;isChauffageVisible=false;isECSVisible=false">Le groupe <mat-icon>{{isSolutionsVisible ? 'expand_less':'expand_more'}}</mat-icon></li>
     <div class="nestedGroup" [ngClass]="isLeGroupeVisible ? 'groupVisible':'groupHidden'">

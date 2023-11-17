@@ -32,7 +32,7 @@
     </div>
     <owl-carousel-o [options]="customOptions">
         <ng-template carouselSlide *ngFor="let solution of solutions">
-            <div class="carousel">
+            <div class="carousel carouselSolutions">
                 <div class="header">
                     <img src="{{solution.icon}}" alt="">
                     <h2 *ngFor="let title of solution.title">{{title}}</h2>

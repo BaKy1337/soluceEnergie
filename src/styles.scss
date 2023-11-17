@@ -1,9 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 @import "../node_modules/ngx-owl-carousel-o/lib/styles/scss/owl.carousel.scss";
 @import "../node_modules/ngx-owl-carousel-o/lib/styles/scss/owl.theme.default.scss";
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #51c4b8 #ffffff;
+}
+
+*::-webkit-scrollbar {
+  width: 6px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #51c4b8;
+  border-radius: 16px;
+  border: 0px none #fefefe;
+}
 
 * {
   margin: 0;
@@ -14,6 +33,7 @@
 }
 
 body {
+  transition: 0.3s;
   background-color: #fefefe;
 }
 html {
@@ -54,4 +74,207 @@ html {
   font-family: Poppins, sans-serif;
   font-size: 2rem;
   margin: 0 1rem;
+}
+
+.solutionMenu {
+  .mdc-text-field--filled:not(.mdc-text-field--disabled)
+    .mdc-line-ripple::before {
+    border-bottom-color: transparent !important;
+  }
+  .mdc-text-field--filled:not(.mdc-text-field--disabled)
+    .mdc-line-ripple::after {
+    border-bottom-color: transparent !important;
+  }
+}
+.mdc-text-field--filled:not(.mdc-text-field--disabled).mdc-text-field--focused
+  .mdc-floating-label,
+.mdc-text-field--filled:not(.mdc-text-field--disabled).mdc-text-field--focused
+  .mdc-floating-label--float-above,
+.mat-mdc-option.mdc-list-item--selected:not(.mdc-list-item--disabled)
+  .mdc-list-item__primary-text,
+.mat-mdc-form-field.mat-focused .mat-mdc-select-arrow,
+.mat-primary .mat-pseudo-checkbox-checked.mat-pseudo-checkbox-minimal::after,
+.mat-primary
+  .mat-pseudo-checkbox-indeterminate.mat-pseudo-checkbox-minimal::after {
+  color: #23589b !important;
+}
+
+.solution_description {
+  ul {
+    padding-left: 2rem;
+  }
+  h3,
+  h2 {
+    font-family: Montserrat, sans-serif;
+    font-weight: 600;
+    text-transform: capitalize;
+  }
+}
+
+.question_choisie {
+  h3 {
+    font-family: Montserrat, sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  ul {
+    padding-left: 2rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .question_choisie {
+    h3 {
+      font-size: 0.9rem !important;
+    }
+  }
+}
+
+// DARKMODE
+
+.dark {
+  background-color: #1e1e1e;
+  .matMenu .mat-mdc-menu-item,
+  .matMenu .mat-mdc-menu-item:visited,
+  .matMenu .mat-mdc-menu-item:link {
+    background: #040911;
+  }
+  .mat-mdc-menu-content {
+    background: #040911;
+  }
+
+  .desktopMenu {
+    background: #040911 !important;
+  }
+  .mobileMenu {
+    background: #040911 !important;
+  }
+
+  .mobileMenuOpened {
+    background-image: linear-gradient(
+      to right bottom,
+      #040911,
+      #011210
+    ) !important;
+    .menuOpened {
+      .nestedGroup {
+        background: #08172b !important;
+      }
+      .nestedSubGroup {
+        background: #031935 !important;
+      }
+    }
+  }
+
+  .landingPage {
+    background-image: linear-gradient(
+      to right bottom,
+      #040911,
+      #011210
+    ) !important;
+  }
+  h1 {
+    color: #fefefe;
+  }
+  .line {
+    background: #fefefe !important;
+  }
+  .dots {
+    .dot {
+      background-color: #333333 !important;
+    }
+  }
+  .carouselSolutions {
+    background: #333333 !important;
+    .header {
+      background: #0a131b !important;
+    }
+    ul {
+      li {
+        color: #fefefe !important;
+      }
+      li:nth-child(odd) {
+        background: #222222 !important;
+      }
+    }
+  }
+  .servicesContainer {
+    .service {
+      background: #111 !important;
+      color: #fefefe;
+      img {
+        filter: invert(99%) sepia(88%) saturate(201%) hue-rotate(187deg)
+          brightness(115%) contrast(99%);
+      }
+    }
+  }
+  .testimonials {
+    background-image: linear-gradient(
+      to right bottom,
+      #040911,
+      #011210
+    ) !important;
+  }
+  .logos {
+    background-color: rgb(17 29 45 / 25%) !important;
+  }
+  .footer {
+    background: #080e14 !important;
+  }
+  app-root
+    > app-home
+    > app-footer
+    > div
+    > div.top_footer
+    > div.newsletter
+    > div
+    > input[type="text"] {
+    background: #08131b !important;
+  }
+
+  .mdc-text-field--filled:not(.mdc-text-field--disabled).mdc-text-field--focused
+    .mdc-floating-label,
+  .mdc-text-field--filled:not(.mdc-text-field--disabled).mdc-text-field--focused
+    .mdc-floating-label--float-above,
+  .mat-mdc-option.mdc-list-item--selected:not(.mdc-list-item--disabled)
+    .mdc-list-item__primary-text,
+  .mat-mdc-form-field.mat-focused .mat-mdc-select-arrow,
+  .mat-primary .mat-pseudo-checkbox-checked.mat-pseudo-checkbox-minimal::after,
+  .mat-primary
+    .mat-pseudo-checkbox-indeterminate.mat-pseudo-checkbox-minimal::after {
+    color: #fefefe !important;
+  }
+  #mat-select-0-panel {
+    background: #333;
+  }
+  .mat-mdc-form-field-type-mat-select:not(.mat-form-field-disabled)
+    .mat-mdc-text-field-wrapper {
+    background: #111;
+  }
+  #mat-mdc-form-field-label-0 > mat-label {
+    color: #fefefe;
+  }
+  #mat-select-value-1 > span > span {
+    color: #fefefe;
+  }
+  #mat-select-0
+    > div
+    > div.mat-mdc-select-arrow-wrapper.ng-tns-c3393473648-1
+    > div
+    > svg
+    > path {
+    color: #fefefe;
+  }
+  .mat-mdc-option .mdc-list-item__primary-text {
+    color: #fefefe;
+  }
+  .carouselSolution {
+    background: #0b1514 !important;
+  }
+  .carouselSolution:active {
+    background: #070a09 !important;
+  }
+  .solution_description,
+  .question_choisie {
+    color: #fefefe;
+  }
 }

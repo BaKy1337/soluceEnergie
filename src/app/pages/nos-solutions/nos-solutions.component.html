@@ -1,0 +1,48 @@
+<app-navbar></app-navbar>
+<div class="header">
+    <img class="header_img" src="{{solutionChoisie.img}}">
+    <h1 class="header_title">{{solutionChoisie.title}}</h1>
+</div>
+<div class="container_menu">
+    <mat-form-field class="solutionMenu">
+        <mat-label>Choisissez une option</mat-label>
+        <mat-select [(value)]="this.solutionID" (selectionChange)="changeSolution($event)">
+          <mat-option value="{{menu.id}}" *ngFor="let menu of menuSolutions">{{menu.title}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+</div>
+<div class="solution_description" [innerHTML]="solutionChoisie.description">
+</div>
+
+<div class="owlCarouselSolution">
+    <owl-carousel-o [options]="customOptions">
+        <ng-template carouselSlide *ngFor="let question of solutionChoisie.listQuestions; index as i">
+            <div class="carousel carouselSolution" (click)="selectQuestion(i, question.id)" [ngClass]="activeQuestion == i ? 'active_question':''">
+                <div class="title_question">
+                    <span>{{question.question}}</span>
+                </div>
+            </div>
+        </ng-template>
+    </owl-carousel-o>
+</div>
+
+<div class="question_choisie" [innerHTML]="questionChoisie"></div>
+<app-footer></app-footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <mat-select value="{{solutionID}}" (valueChange)="changeSolution($event)">
+    <mat-option *ngFor="let solution of menuSolutions" value="{{solution.id}}">{{solution.title}}</mat-option>
+  </mat-select> -->

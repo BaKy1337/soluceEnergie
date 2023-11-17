@@ -17,6 +17,8 @@ import { ListservicesComponent } from './components/listservices/listservices.co
 import { TestimonialsComponent } from './components/testimonials/testimonials.component';
 import { BrandsComponent } from './components/brands/brands.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { NosSolutionsComponent } from './pages/nos-solutions/nos-solutions.component';
+import {MatSelectModule} from '@angular/material/select';
 
 
 @NgModule({
@@ -28,7 +30,8 @@ import { FooterComponent } from './components/footer/footer.component';
     ListservicesComponent,
     TestimonialsComponent,
     BrandsComponent,
-    FooterComponent
+    FooterComponent,
+    NosSolutionsComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +42,8 @@ import { FooterComponent } from './components/footer/footer.component';
     MatButtonModule,
     MatExpansionModule,
     MatTreeModule,
-    CarouselModule
+    CarouselModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -14,21 +15,22 @@ export class NavbarComponent {
   isMenuOpened = false;
   darkMode = localStorage.getItem('theme') == 'light' ? false:true;
 
+  constructor(private router: Router) {}
+
   toggleMenu(){
     this.isMenuOpened = !this.isMenuOpened;
   }
 
   toggleTheme(){
+    const bodyTag = document.body;
      if(localStorage.getItem('theme') == 'light'){
+      bodyTag.classList.add('dark');
       localStorage.setItem('theme', 'dark');
       this.darkMode = true;
      }else{
+      bodyTag.classList.remove('dark');
       localStorage.setItem('theme', 'light');
       this.darkMode = false;
      }
-     console.log(localStorage.getItem('theme'));
-     console.log(this.darkMode);
-     
-     
   }
 }
