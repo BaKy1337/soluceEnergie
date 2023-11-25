@@ -45,10 +45,10 @@
 </mat-menu>
 
 <mat-menu class="matMenu" #menuLeGroupe>
-  <menu mat-menu-item>Qui sommes nous ?</menu>
-  <menu mat-menu-item>Nos certifications</menu>
-  <menu mat-menu-item>Nos partenaires</menu>
-  <menu mat-menu-item>Vos aides</menu>
+  <menu mat-menu-item routerLink="/quisommesnous">Qui sommes nous ?</menu>
+  <menu mat-menu-item routerLink="/nos-certifications">Nos certifications</menu>
+  <menu mat-menu-item routerLink="/nos-partenaires">Nos partenaires</menu>
+  <menu mat-menu-item routerLink="/vos-aides">Vos aides</menu>
 </mat-menu>
 
 <!-- Mobile Menu -->
@@ -109,10 +109,10 @@
     </div>
     <li (click)="isLeGroupeVisible = !isLeGroupeVisible;isSolutionsVisible = false;isIsolationVisible =false;isChauffageVisible=false;isECSVisible=false">Le groupe <mat-icon>{{isSolutionsVisible ? 'expand_less':'expand_more'}}</mat-icon></li>
     <div class="nestedGroup" [ngClass]="isLeGroupeVisible ? 'groupVisible':'groupHidden'">
-        <li >Qui sommes nous ?</li>
-        <li>Nos certifications</li>
-        <li>Nos partenaires</li>
-        <li>Vos aides</li>
+        <li  routerLink="/quisommesnous">Qui sommes nous ?</li>
+        <li  routerLink="/nos-certifications">Nos certifications</li>
+        <li routerLink="/nos-partenaires">Nos partenaires</li>
+        <li routerLink="/vos-aides">Vos aides</li>
     </div>
     <li>Contact</li>
     <li class="btnAnalyse">Analyse gratuite</li>

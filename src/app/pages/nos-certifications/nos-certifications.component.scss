@@ -1,0 +1,36 @@
+.description{
+    margin-top: 12rem;
+    p{
+        margin: 0;
+        padding: 0 6rem;
+        font-size: 1.15rem;
+        text-align: center;
+    }
+}
+
+.certifs{
+    margin: 4rem auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4rem;
+    img{
+        width: 25%;
+    }
+}
+
+@media screen and (max-width: 870px) {
+    .description{
+        margin-top: 8rem;
+        p{
+            padding: 0 4rem;
+            font-size: .9rem;
+        }
+    }
+
+    .certifs{
+        img{
+            width: 15rem;
+        }
+    }
+}

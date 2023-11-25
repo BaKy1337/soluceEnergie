@@ -1,0 +1,46 @@
+.logo{
+    margin-top: 12rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    img{
+        width: 60%;
+    }
+}
+
+.description{
+    margin: 4rem 0 0;
+    padding: 0 8rem;
+    text-align: center;
+}
+
+.aboutus{
+    padding: 0 4rem;
+    margin-top: 5rem;
+    h1{
+        font-family: "Montserrat", sans-serif;
+        font-size: 1.25rem;
+        font-weight: 600;
+        text-transform: capitalize;
+    }
+    p{
+        margin-bottom: 3rem;
+    }
+}
+
+@media screen and (max-width: 870px) {
+    .logo{
+        margin-top: 8rem;
+    }
+    .description{
+        padding: 0 4rem;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .logo{
+        img{
+            width: 40%;
+        }
+    }
+}

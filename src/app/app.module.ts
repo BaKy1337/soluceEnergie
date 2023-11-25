@@ -19,6 +19,10 @@ import { BrandsComponent } from './components/brands/brands.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { NosSolutionsComponent } from './pages/nos-solutions/nos-solutions.component';
 import {MatSelectModule} from '@angular/material/select';
+import { AboutComponent } from './pages/about/about.component';
+import { NosCertificationsComponent } from './pages/nos-certifications/nos-certifications.component';
+import { NosPartenairesComponent } from './pages/nos-partenaires/nos-partenaires.component';
+import { VosAidesComponent } from './pages/vos-aides/vos-aides.component';
 
 
 @NgModule({
@@ -31,7 +35,11 @@ import {MatSelectModule} from '@angular/material/select';
     TestimonialsComponent,
     BrandsComponent,
     FooterComponent,
-    NosSolutionsComponent
+    NosSolutionsComponent,
+    AboutComponent,
+    NosCertificationsComponent,
+    NosPartenairesComponent,
+    VosAidesComponent
   ],
   imports: [
     BrowserModule,

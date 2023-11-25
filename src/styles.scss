@@ -40,6 +40,10 @@ html {
   scroll-behavior: smooth;
 }
 
+p,h1,h2,h3,h4,h5,h6,span {
+  font-family: 'Montserrat', sans-serif !important;
+}
+
 .matMenu .mat-mdc-menu-item,
 .matMenu .mat-mdc-menu-item:visited,
 .matMenu .mat-mdc-menu-item:link {
@@ -219,6 +223,15 @@ html {
   }
   .footer {
     background: #080e14 !important;
+    .top_footer {
+      .newsletter {
+        .inputNewsletter {
+          input {
+            background: #08131b !important;
+          }
+        }
+      }
+    }
   }
   app-root
     > app-home
@@ -229,6 +242,21 @@ html {
     > div
     > input[type="text"] {
     background: #08131b !important;
+  }
+  app-root > app-about > p{
+    color: #fefefe;
+  }
+  .aboutus {
+    p {
+      color: #fefefe;
+    }
+  }
+
+  app-root > app-nos-certifications > div.description > p{
+    color: #fefefe;
+  }
+  app-root > app-nos-partenaires > div > p{
+    color: #fefefe;
   }
 
   .mdc-text-field--filled:not(.mdc-text-field--disabled).mdc-text-field--focused

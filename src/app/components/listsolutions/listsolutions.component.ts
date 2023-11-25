@@ -49,7 +49,7 @@ export class ListsolutionsComponent {
         "Valorisation de votre bien"
       ],
       id:'isolation',
-      type:'murs'
+      type:'idm'
     },
     {
       icon:'../../../assets/icons/solutions/chauffe_eau_solaire.svg',
@@ -90,7 +90,7 @@ export class ListsolutionsComponent {
         "Valorisation de votre bien",
       ],
       id:'chauffage',
-      type:'aireau'
+      type:'pacae'
     },
     {
       icon:'../../../assets/icons/solutions/chauffage_solaire.svg',
@@ -105,7 +105,7 @@ export class ListsolutionsComponent {
         "Valorisation de votre bien",
       ],
       id:'chauffage',
-      type:'solaire'
+      type:'cs'
     },
     {
       icon:'../../../assets/icons/solutions/pompe_a_chaleur.svg',
@@ -120,7 +120,7 @@ export class ListsolutionsComponent {
         "66% à 75% d’économies sur votre facture de chauffage",
       ],
       id:'chauffage',
-      type:'airair'
+      type:'pacaa'
     },
     {
       icon:'../../../assets/icons/solutions/photovoltaique.svg',

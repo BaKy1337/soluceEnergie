@@ -40,7 +40,7 @@
                 <ul>
                     <li *ngFor="let item of solution.list">{{item}}</li>
                 </ul>
-                <a routerLink="/nos-solutions" [queryParams]="{id: solution.id, type: solution.type}">En savoir plus</a>
+                <a routerLink="/nos-solutions" [queryParams]="{solutionID: solution.type}">En savoir plus</a>
             </div>
         </ng-template>
     </owl-carousel-o>

@@ -445,7 +445,7 @@ export class NosSolutionsComponent {
   constructor(private Activatedroute: ActivatedRoute, private router: Router) {}
   ngOnInit() {
     this.Activatedroute.queryParamMap.subscribe((params: any) => {
-      this.solutionID = params.get('solutionID');
+      this.solutionID =  params.get('solutionID');
     });
 
     for (let solution of this.solutions) {
@@ -457,7 +457,7 @@ export class NosSolutionsComponent {
     }
   }
 
-  changeSolution(event: any) {
+  changeSolution(event: any) {    
     let selectedSolution = event.value;
     for (let solution of this.solutions) {
       if (solution.id == selectedSolution) {
