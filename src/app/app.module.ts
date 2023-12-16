@@ -23,7 +23,9 @@ import { AboutComponent } from './pages/about/about.component';
 import { NosCertificationsComponent } from './pages/nos-certifications/nos-certifications.component';
 import { NosPartenairesComponent } from './pages/nos-partenaires/nos-partenaires.component';
 import { VosAidesComponent } from './pages/vos-aides/vos-aides.component';
-
+import { ContactComponent } from './pages/contact/contact.component';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { SnackbarComponent } from './components/snackbar/snackbar.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +41,9 @@ import { VosAidesComponent } from './pages/vos-aides/vos-aides.component';
     AboutComponent,
     NosCertificationsComponent,
     NosPartenairesComponent,
-    VosAidesComponent
+    VosAidesComponent,
+    ContactComponent,
+    SnackbarComponent
   ],
   imports: [
     BrowserModule,
@@ -51,7 +55,8 @@ import { VosAidesComponent } from './pages/vos-aides/vos-aides.component';
     MatExpansionModule,
     MatTreeModule,
     CarouselModule,
-    MatSelectModule
+    MatSelectModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

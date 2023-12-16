@@ -1,0 +1,160 @@
+.contact__form {
+  margin-top: 8rem;
+  h1 {
+    text-align: center;
+    padding: 2rem 1rem 0;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 0.5rem;
+  }
+  p {
+    text-align: center;
+    padding: 0 1rem;
+    font-style: italic;
+  }
+  .callCompany {
+    transition: 0.3s;
+    text-decoration: none;
+    color: #fefefe;
+    background-color: #aaaaaa;
+    display: flex;
+    width: fit-content;
+    padding: 1rem 2rem;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem auto 2rem;
+    border-radius: 0.25rem;
+    gap: 1rem;
+    text-transform: uppercase;
+  }
+  .callCompany:hover {
+    background-color: #2ea0ba;
+  }
+  .form {
+    padding: 1rem;
+    margin: 0.5rem;
+    .grid {
+      .input {
+        margin: 0.5rem 0;
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+        label {
+          font-style: italic;
+        }
+        input {
+          border-radius: 0.25rem;
+          border: 1px solid #aaaaaa;
+          padding: 0.25rem 0.5rem;
+          background: none;
+        }
+        input:focus-visible {
+          outline: none;
+        }
+      }
+    }
+    .grid1 {
+      display: grid;
+      grid-template-columns: auto auto auto;
+      gap: 2rem;
+    }
+    .grid2 {
+      display: grid;
+      grid-template-columns: auto;
+      gap: 2rem;
+    }
+    .grid3 {
+      textarea {
+        border-radius: 0.25rem;
+        border: 1px solid #aaaaaa;
+        padding: 0.25rem 0.5rem;
+        background: none;
+        min-height: 10rem;
+      }
+      textarea:focus-visible {
+        outline: none;
+      }
+    }
+    .checker {
+      margin: 1rem 0;
+      display: flex;
+      gap: 0.5rem;
+      input {
+        appearance: none;
+        width: 20px;
+        height: 20px;
+        border: 1px solid #aaaaaa;
+        border-radius: 5px;
+        background-color: transparent;
+        display: inline-block;
+        position: relative;
+        margin-right: 10px;
+        cursor: pointer;
+      }
+      input:before {
+        content: "";
+        background-color: #aaaaaa;
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0);
+        width: 10px;
+        height: 10px;
+        border-radius: 3px;
+        transition: all 0.3s ease-in-out;
+      }
+      input:checked:before {
+        transform: translate(-50%, -50%) scale(1);
+      }
+    }
+    button{
+        transition: .3s;
+        display: flex;
+        width: fit-content;
+        padding: .5rem 2rem;
+        border: none;
+        border-radius: .25rem;
+        background: #2ea0ba;
+        color: #fefefe;
+        cursor: pointer;
+    }
+    button:hover{
+        background: #257b8e;
+    }
+  }
+  .rgpd{
+    text-align: left;
+    margin: 0.5rem;
+    font-size: .8rem;
+    color: #414141;
+  }
+}
+
+.expansionParaph{
+    text-align: left !important;
+    padding: 0 !important;
+    font-style: normal !important;
+    font-size: .8rem;
+}
+.separator{
+    margin-bottom: 5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .form {
+    .grid1 {
+      grid-template-columns: auto !important;
+      gap: 0 !important;
+    }
+  }
+}
+
+@media screen and (max-width: 530px) {
+    .form {
+        button{
+            width: 100% !important;
+            justify-content: center;
+        }
+    }
+  }

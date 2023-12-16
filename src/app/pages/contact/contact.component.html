@@ -1,0 +1,57 @@
+<app-navbar></app-navbar>
+<div class="contact__form">
+    <h1>Vous avez une question ?</h1>
+    <p>Veuillez nous appelez ou compléter le formulaire ci-dessous, nous vous répondrons rapidement !</p>
+    <p>Siège social : 48 Rue Claude Balbastre, Montpellier, France</p>
+    <a href="tel:+33651934808" class="callCompany">Appeler <mat-icon>support_agent</mat-icon></a>
+
+    <div class="form" id="myForm">
+        <div class="grid1 grid">
+            <div class="input">
+                <label for="lname">Nom*</label>
+                <input #lname type="text" name="lname" id="lname" placeholder="Doe" (input)="fillForm('lname',lname.value)">
+            </div>
+            <div class="input">
+                <label for="fname">Prénom*</label>
+                <input #fname type="text" name="fname" id="fname" placeholder="John" (input)="fillForm('fname',fname.value)">
+            </div>
+            <div class="input">
+                <label for="phone">Téléphone</label>
+                <input #phone type="tel" name="phone" id="phone" placeholder="06 51 ........" maxlength="10" (input)="fillForm('phone',phone.value)">
+            </div>
+        </div>
+        <div class="grid2 grid">
+            <div class="input">
+                <label for="email">Email*</label>
+                <input #email type="email" name="email" id="email" placeholder="john.doe@example.com" (input)="fillForm('email',email.value)">
+            </div>
+        </div>
+        <div class="grid3 grid">
+            <div class="input">
+                <label for="message">Message*</label>
+                <textarea #message name="message" id="message" placeholder="Décrivez votre besoin..." (input)="fillForm('message',message.value)"></textarea>
+            </div>
+        </div>
+        <div class="checker">
+            <input type="checkbox" name="conditions" id="conditions" (click)="toggleConditions()">
+            <label>En cochant cette case j'accepte les conditions particulières*</label>
+        </div>
+        <button (click)="sendForm()">J'envoie !</button>
+    </div>
+    <p class="rgpd">
+        *Les informations renseignées ne doivent pas comporter de données à caractère personnel sensibles (informations qui révèlent la prétendue origine raciale ou ethnique, les opinions politiques, les convictions religieuses ou philosophiques ou l'appartenance syndicale, des données génétiques, des données biométriques, des données concernant la santé ou des données concernant la vie sexuelle ou l'orientation sexuelle d’une personne)
+    </p>
+    <mat-accordion class="accordion">
+        <mat-expansion-panel hideToggle>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Vos droits et sur le traitement de vos données.
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <p class="expansionParaph">Les données personnelles communiquées sont destinées à Soluce Energie et ses sous-traitants et sont nécessaires aux fins de vous contacter. Vous disposez de droits d’accès, de rectification, d’effacement, de portabilité, de limitation, d’opposition, de retrait de votre consentement à tout moment et du droit d’introduire une réclamation auprès d’une autorité de contrôle, ainsi que d’organiser le sort de vos données post-mortem. Vous pouvez exercer ces droits par voie postale à l'adresse 48, rue Claude Balbastre 34070 Montpellier, ou par courrier électronique à l'adresse contact@soluce-energie.fr. Un justificatif d'identité pourra vous être demandé. Nous conservons vos données pendant la période de prise de contact puis pendant la durée de prescription légale aux fins probatoire et de gestion des contentieux.</p>
+          </mat-expansion-panel>
+    </mat-accordion>
+    <div class="separator"></div>
+</div>
+
+<app-footer></app-footer>

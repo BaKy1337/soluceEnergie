@@ -1,3 +1,4 @@
+import { ContactComponent } from './pages/contact/contact.component';
 import { NgModule } from '@angular/core';
 import { ExtraOptions, RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: 'nos-certifications', component: NosCertificationsComponent },
   { path: 'nos-partenaires', component: NosPartenairesComponent },
   { path: 'vos-aides', component: VosAidesComponent },
+  { path: 'contact', component: ContactComponent },
 ];
 
 const routesOptions: ExtraOptions = {
