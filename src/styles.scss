@@ -182,6 +182,17 @@ p,h1,h2,h3,h4,h5,h6,span {
   }
 }
 
+@media screen and (min-width: 1024px) {
+  body > app-root > app-contact > div > mat-accordion > mat-expansion-panel{
+      margin: 0.5rem 10rem !important;
+      #mat-expansion-panel-header-0{
+        padding: 0 1rem !important;
+      }
+      
+  }
+  
+}
+
 // DARKMODE
 // DARKMODE
 // DARKMODE

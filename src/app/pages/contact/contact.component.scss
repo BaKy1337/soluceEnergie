@@ -158,3 +158,15 @@
         }
     }
   }
+
+  @media screen and (min-width: 1024px) {
+    .form {
+        margin: 0.5rem 10rem !important;
+    }
+    .rgpd{
+        margin: 0.5rem 10rem !important;
+    }
+    body > app-root > app-contact > div > mat-accordion{
+        margin: 0.5rem 10rem !important;
+    }
+  }
