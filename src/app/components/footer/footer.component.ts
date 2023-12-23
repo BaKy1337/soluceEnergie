@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { RGPDComponent } from '../rgpd/rgpd.component';
+import { MentionsLegalesComponent } from '../mentions-legales/mentions-legales.component';
 
 @Component({
   selector: 'app-footer',
@@ -7,4 +10,17 @@ import { Component } from '@angular/core';
 })
 export class FooterComponent {
   currentYear = new Date().getFullYear();
+
+  constructor(public dialog: MatDialog) {}
+
+  openRGPD() {
+    this.dialog.open(RGPDComponent, {
+      panelClass: 'supportComponent'
+    });
+  }
+  openMentions(){
+    this.dialog.open(MentionsLegalesComponent, {
+      panelClass: 'supportComponent'
+    });
+  }
 }

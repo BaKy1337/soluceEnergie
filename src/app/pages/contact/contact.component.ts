@@ -14,6 +14,10 @@ export class ContactComponent {
   email = '';
   message = '';
 
+  private serviceID = 'service_6j0kynv';
+  private templateID = 'template_53or91r';
+  private publicKey = 'xlymoyHRoM-mCMQL9';
+
   areConditionsAccepted = false;
 
   constructor(private snackBar: SnackbarService) {}
@@ -39,9 +43,7 @@ export class ContactComponent {
       return;
     }
 
-    const serviceID = 'service_6j0kynv';
-    const templateID = 'template_53or91r';
-    const publicKey = 'xlymoyHRoM-mCMQL9';
+    
     let templateParams = {
       message: this.message,
       nom: this.lname,
@@ -50,7 +52,7 @@ export class ContactComponent {
       phone: this.phone == '' ? 'Non renseigné':this.phone,
     };
 
-    emailjs.send(serviceID, templateID, templateParams, publicKey).then(
+    emailjs.send(this.serviceID, this.templateID, templateParams, this.publicKey).then(
        (response) => {
         this.snackBar.openSnackBar(
           'Envoyé avec succès !',

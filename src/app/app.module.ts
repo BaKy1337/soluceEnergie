@@ -26,6 +26,15 @@ import { VosAidesComponent } from './pages/vos-aides/vos-aides.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { SnackbarComponent } from './components/snackbar/snackbar.component';
+import { RGPDComponent } from './components/rgpd/rgpd.component';
+import {MatDialogModule} from '@angular/material/dialog';
+import { MentionsLegalesComponent } from './components/mentions-legales/mentions-legales.component';
+import { AnalyseComponent } from './components/analyse/analyse.component';
+import {MatGridListModule} from '@angular/material/grid-list';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { Injector } from '@angular/core';
+
+export let AppInjector: Injector;
 
 @NgModule({
   declarations: [
@@ -43,7 +52,10 @@ import { SnackbarComponent } from './components/snackbar/snackbar.component';
     NosPartenairesComponent,
     VosAidesComponent,
     ContactComponent,
-    SnackbarComponent
+    SnackbarComponent,
+    RGPDComponent,
+    MentionsLegalesComponent,
+    AnalyseComponent,
   ],
   imports: [
     BrowserModule,
@@ -56,9 +68,16 @@ import { SnackbarComponent } from './components/snackbar/snackbar.component';
     MatTreeModule,
     CarouselModule,
     MatSelectModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatDialogModule,
+    MatGridListModule,
+    MatFormFieldModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor(private injector: Injector) {
+    AppInjector = this.injector;
+  }
+}

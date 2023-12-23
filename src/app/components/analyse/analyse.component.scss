@@ -1,0 +1,104 @@
+.col__2 {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 1.5rem;
+  .formField {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    label {
+      font-size: 0.85rem;
+      font-style: italic;
+      padding-left: 0.2rem;
+    }
+    input {
+      border-radius: 0.25rem;
+      border: 1px solid #aaaaaa;
+      padding: 0.25rem 0.5rem;
+      background: none;
+    }
+    input:focus-visible {
+      outline: none;
+    }
+    select {
+      border-radius: 0.25rem;
+      border: 1px solid #aaaaaa;
+      padding: 0.36rem 0.5rem;
+      background: none;
+      option {
+        padding: 0.36rem 0.5rem;
+      }
+    }
+    select:focus-visible {
+      outline: none;
+    }
+  }
+}
+.message {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+  label {
+    font-size: 0.85rem;
+    font-style: italic;
+    padding-left: 0.2rem;
+  }
+  textarea {
+    border-radius: 0.25rem;
+    border: 1px solid #aaaaaa;
+    padding: 0.25rem 0.5rem;
+    background: none;
+    height: 150px;
+  }
+  textarea:focus-visible {
+    outline: none;
+  }
+}
+
+.checker {
+  margin: 1rem 0;
+  display: flex;
+  gap: 0.5rem;
+  input {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #aaaaaa;
+    border-radius: 5px;
+    background-color: transparent;
+    display: inline-block;
+    position: relative;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  input:before {
+    content: "";
+    background-color: #aaaaaa;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    width: 10px;
+    height: 10px;
+    border-radius: 3px;
+    transition: all 0.3s ease-in-out;
+  }
+  input:checked:before {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+.rgpd {
+  font-size: 0.75rem;
+  font-style: italic;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  span {
+    color: #333;
+    text-decoration: underline;
+    text-underline-position: under;
+  }
+}

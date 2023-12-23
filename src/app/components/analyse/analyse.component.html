@@ -1,0 +1,61 @@
+<form class="contact-form" id="devisForm" (submit)="sendEmail($event)">
+  <h2 mat-dialog-title>Demandez votre devis gratuitement !</h2>
+  <mat-dialog-content class="mat-typography">
+    <div class="col__2">
+      <div class="formField">
+        <label>Nom*</label>
+        <input type="text" name="nom" required>
+      </div>
+      <div class="formField">
+        <label>Prénom*</label>
+        <input type="text" name="prenom" required>
+      </div>
+      <div class="formField">
+        <label>Email*</label>
+        <input type="email" name="email" required>
+      </div>
+      <div class="formField">
+        <label>Téléphone*</label>
+        <input type="tel" name="phone" required>
+      </div>
+      <div class="formField">
+        <label>Code postal*</label>
+        <input type="number" name="postal" required>
+      </div>
+      <div class="formField">
+        <label>Type de demande</label>
+        <select #typeSelected id="monselect" name="type_demande" (change)="typeDemande(typeSelected)">
+          <option value="isolation_des_combles">Isolation des combles</option>
+          <option value="isolation_des_murs">Isolation des murs</option>
+          <option value="pompe_a_chaleur_air_eau">Pompe à chaleur air eau</option>
+          <option value="pompe_a_chaleur_air_air">Pompe à chaleur air air</option>
+          <option value="chauffage_solaire">Chauffage solaire</option>
+          <option value="chauffe_eau_thermodynamique">Chauffe eau thermodynamique</option>
+          <option value="chauffe_eau_solaire">Chauffe eau solaire</option>
+          <option value="panneaux_photovoltaiques">Panneaux Photovoltaïques</option>
+          <option value="autre" selected>Autre</option>
+        </select>
+      </div>
+    </div>
+    <div class="message">
+      <label>Message*</label>
+      <textarea name="message" required></textarea>
+    </div>
+    <div class="checker">
+      <input type="checkbox" name="conditions" id="conditions" (click)="toggleConditions()">
+      <label>En cochant cette case j'accepte les conditions particulières*</label>
+  </div>
+  <p class="rgpd">
+    *Les informations renseignées ne doivent pas comporter de données à caractère personnel sensibles (informations qui révèlent la prétendue origine raciale ou ethnique, les opinions politiques, les convictions religieuses ou philosophiques ou l'appartenance syndicale, des données génétiques, des données biométriques, des données concernant la santé ou des données concernant la vie sexuelle ou l'orientation sexuelle d’une personne)
+  </p>
+  <p class="rgpd">
+    <span>Vos droits et sur le traitement de vos données.</span>
+    Les données personnelles communiquées sont destinées à Soluce Energie et ses sous-traitants et sont nécessaires aux fins de vous contacter. Vous disposez de droits d’accès, de rectification, d’effacement, de portabilité, de limitation, d’opposition, de retrait de votre consentement à tout moment et du droit d’introduire une réclamation auprès d’une autorité de contrôle, ainsi que d’organiser le sort de vos données post-mortem. Vous pouvez exercer ces droits par voie postale à l'adresse 48, rue Claude Balbastre 34070 Montpellier, ou par courrier électronique à l'adresse contact@soluce-energie.fr. Un justificatif d'identité pourra vous être demandé. Nous conservons vos données pendant la période de prise de contact puis pendant la durée de prescription légale aux fins probatoire et de gestion des contentieux.
+  </p>
+  </mat-dialog-content>
+
+  <mat-dialog-actions align="end">
+    <button type="submit" mat-button cdkFocusInitial id="buttonSubmit">Envoyer</button>
+    <input type="reset" hidden id="resetForm">
+  </mat-dialog-actions>
+</form>

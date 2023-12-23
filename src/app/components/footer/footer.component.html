@@ -3,22 +3,20 @@
         <div class="entreprise">
             <img src="../../../assets/logoSoluceWhite.svg" alt="groupe soluce energie logo">
             <div class="socials">
-                <img src="../../../assets/icons/insta.svg" alt="instagram logo">
-                <img src="../../../assets/icons/facebook.svg" alt="facebook logo">
+                <a href="https://www.instagram.com/soluceenergie/" target="_blank"><img src="../../../assets/icons/insta.svg" alt="instagram logo"></a>
+                <a href="https://www.facebook.com/profile.php?id=100094139553411&locale=fr_FR" target="_blank"><img src="../../../assets/icons/facebook.svg" alt="facebook logo"></a>
+                
             </div>
         </div>
         <ul class="list">
             <li class="title">Entreprise</li>
-            <li><a href="#">à propos</a></li>
-            <li><a href="#">blog</a></li>
-            <li><a href="#">contact</a></li>
-            <li><a href="#">témoignages</a></li>
+            <li><a routerLink="/quisommesnous">à propos</a></li>
+            <li><a routerLink="/contact">contact</a></li>
         </ul>
         <ul class="list">
             <li class="title">Support</li>
-            <li><a href="#">RGPD</a></li>
-            <li><a href="#">Mentions légales</a></li>
-            <li><a href="#">FAQ</a></li>
+            <li><a (click)="openRGPD()" style="cursor: pointer;">RGPD</a></li>
+            <li><a (click)="openMentions()" style="cursor: pointer;">Mentions légales</a></li>
 
         </ul>
         <div class="newsletter">

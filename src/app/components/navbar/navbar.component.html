@@ -8,7 +8,7 @@
     <li><a [matMenuTriggerFor]="menuSolutions">Nos solutions</a></li>
     <li><a [matMenuTriggerFor]="menuLeGroupe">Le groupe</a></li>
     <li routerLink="/contact"><a>Contact</a></li>
-    <li><a class="btn">Analyse gratuite</a></li>
+    <li><a class="btn" (click)="openAnalyse()">Analyse gratuite</a></li>
     <li>
       <mat-icon
           aria-hidden="false"
@@ -115,6 +115,6 @@
         <li routerLink="/vos-aides">Vos aides</li>
     </div>
     <li routerLink="/contact">Contact</li>
-    <li class="btnAnalyse">Analyse gratuite</li>
+    <li class="btnAnalyse" routerLink="/analyse-gratuite">Analyse gratuite</li>
 </ul>
 </div>

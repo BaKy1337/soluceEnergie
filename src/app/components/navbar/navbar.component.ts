@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { MatDialog } from '@angular/material/dialog';
+import { AnalyseComponent } from '../analyse/analyse.component';
 
 @Component({
   selector: 'app-navbar',
@@ -15,7 +17,7 @@ export class NavbarComponent {
   isMenuOpened = false;
   darkMode = localStorage.getItem('theme') == 'light' ? false:true;
 
-  constructor(private router: Router) {}
+  constructor(private router: Router,public dialog: MatDialog) {}
 
   toggleMenu(){
     this.isMenuOpened = !this.isMenuOpened;
@@ -32,5 +34,12 @@ export class NavbarComponent {
       localStorage.setItem('theme', 'light');
       this.darkMode = false;
      }
+  }
+
+  openAnalyse(){
+    this.dialog.open(AnalyseComponent, {
+      minWidth: '80%',
+      panelClass: 'AnalyseComponent'
+    });
   }
 }

@@ -391,4 +391,50 @@ p,h1,h2,h3,h4,h5,h6,span {
   .question_choisie {
     color: #fefefe;
   }
+
+  .contact__form{
+    p, label, input{
+      color: #fefefe;
+    }
+    .callCompany{
+      background-color: #2b2b2b !important;
+    }
+    .callCompany:hover{
+      background-color: #13444f !important;
+    }
+    .rgpd{
+      color: #a7a7a7 !important;
+    }
+    button{
+      background-color: #13444f !important;
+    }
+  }
+
+  .contact-form{
+    background-color: #333 !important;
+    *{
+      color: #fefefe !important;
+    }
+    select {
+      option{
+        background-color: #333 !important;
+      }
+    }
+  }
+  .supportComponent{
+    *{
+      background: #333 !important;
+      color: #fefefe !important;
+    }
+    p{
+      color: #e7e7e7 !important;
+    }
+    h2{
+      color: #fefefe !important;
+    }
+  }
+
+  .mat-expansion-panel-header-title {
+    color: #a7a7a7 !important;
+  }
 }
