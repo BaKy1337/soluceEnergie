@@ -102,3 +102,9 @@
     text-underline-position: under;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .col__2 {
+    grid-template-columns: auto;
+  }
+}

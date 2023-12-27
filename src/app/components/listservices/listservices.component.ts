@@ -12,7 +12,7 @@ export class ListservicesComponent {
       title:"Notre Engagement à Répondre à Vos Besoins en Énergie",
       text:[
         "Notre groupe s'engage à trouver les solutions idéales pour répondre précisément à vos exigences énergétiques.",
-        "De la sélection de la pompe à chaleur la plus adaptée à votre confort à sa mise en place, ATEXE vous guide à travers toutes les étapes de votre projet."
+        "De la sélection de la pompe à chaleur la plus adaptée à votre confort à sa mise en place, Soluce Energie vous guide à travers toutes les étapes de votre projet."
       ]
     },
     {

@@ -22,8 +22,8 @@
         <div class="newsletter">
             <span>Restez informé</span>
             <div class="inputNewsletter">
-                <input type="text" placeholder="example@gmail.com">
-                <mat-icon>send</mat-icon>
+                <input #newsletterInput type="text" placeholder="example@gmail.com" id="newsletterInput">
+                <mat-icon style="cursor: pointer;" (click)="sendEmail(newsletterInput.value);newsletterInput.value = ''">send</mat-icon>
             </div>
         </div>
     </div>
